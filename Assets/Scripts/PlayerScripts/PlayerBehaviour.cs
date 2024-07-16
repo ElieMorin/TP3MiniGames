@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class PlayerBehaviour : MonoBehaviour
 {
-    private PlayerState m_CurrentState;
+    [SerializeField]
+    private UI m_UI;
 
+    private PlayerState m_CurrentState;
+    
     void Start()
     {
         m_CurrentState = new PlayerRoaming(this);
@@ -13,7 +16,7 @@ public class PlayerBehaviour : MonoBehaviour
 
     void Update()
     {
-        m_CurrentState.execute();   
+        m_CurrentState.execute(m_UI);   
     }
 
     public void ChangeState(PlayerState state)

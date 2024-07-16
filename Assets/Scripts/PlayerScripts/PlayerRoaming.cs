@@ -10,9 +10,19 @@ public class PlayerRoaming : PlayerState
 
     }
 
-    public override void execute()
+    public override void execute(UI m_UI)
     {
-        Debug.Log("hahhahahahahahhahahahahhahahahhahahahhah");
+        if(Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            m_UI.AddMoney(Color.blue);
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            m_UI.AddMoney(Color.red);
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            m_UI.AddMoney(Color.green);
+        }
     }
-
 }

@@ -58,11 +58,15 @@
     <Analyzer Include="C:\Program Files\Unity2022.3.5f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\UIScripts\UI.cs" />
+    <Compile Include="Assets\Scripts\Observer\EventSystem.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\PlayerChampion.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\PlayerBehaviour.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\PlayerRoaming.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\PlayerCoffee.cs" />
+    <Compile Include="Assets\Scripts\SaveSystem\SaveSystem.cs" />
     <Compile Include="Assets\Scripts\AudioScripts\AudioPool.cs" />
+    <Compile Include="Assets\Scripts\SaveSystem\SaveData.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\PlayerState.cs" />
     <Compile Include="Assets\Scripts\AudioScripts\AudioManager.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\PlayerDonut.cs" />
@@ -725,8 +729,14 @@
     <Reference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Model">
       <HintPath>Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.AI.Navigation">
+      <HintPath>Library\ScriptAssemblies\Unity.AI.Navigation.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.PlasticSCM.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.AI.Navigation.Updater">
+      <HintPath>Library\ScriptAssemblies\Unity.AI.Navigation.Updater.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.State.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll</HintPath>
@@ -758,11 +768,17 @@
     <Reference Include="Unity.Rider.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.AI.Navigation.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.AI.Navigation.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.VisualScripting.State">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.AI.Navigation.Editor.ConversionSystem">
+      <HintPath>Library\ScriptAssemblies\Unity.AI.Navigation.Editor.ConversionSystem.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Flow">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
