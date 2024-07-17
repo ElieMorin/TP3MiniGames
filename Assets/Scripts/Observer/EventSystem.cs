@@ -33,7 +33,7 @@ public class EventSystem
 
     public void SubscribeTo(EEvents eventId, Action<Dictionary<string, object>> func)
     {
-        if (m_Events[eventId] != null)
+        if (m_Events.ContainsKey(eventId))
         {
             m_Events[eventId] += func;
         }
@@ -44,14 +44,14 @@ public class EventSystem
     }
     public void UnSubscribeFrom(EEvents eventId, Action<Dictionary<string, object>> func)
     {
-        if (m_Events[eventId] != null)
+        if (!m_Events.ContainsKey(eventId))
         {
             m_Events[eventId] -= func;
         }
     }
     public void TriggerEvents(EEvents eventId, Dictionary<string,object> parameters)
     {
-        if (m_Events[eventId] != null)
+        if (m_Events.ContainsKey(eventId))
         {
             m_Events[eventId].Invoke(parameters);
         }

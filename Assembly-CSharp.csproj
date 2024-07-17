@@ -62,6 +62,7 @@
     <Compile Include="Assets\Scripts\Observer\EventSystem.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\PlayerChampion.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\PlayerBehaviour.cs" />
+    <Compile Include="Assets\Scripts\Inventory.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\PlayerRoaming.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\PlayerCoffee.cs" />
     <Compile Include="Assets\Scripts\SaveSystem\SaveSystem.cs" />
@@ -774,11 +775,11 @@
     <Reference Include="Unity.VisualScripting.State">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.VSCode.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.AI.Navigation.Editor.ConversionSystem">
       <HintPath>Library\ScriptAssemblies\Unity.AI.Navigation.Editor.ConversionSystem.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.VSCode.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Flow">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>

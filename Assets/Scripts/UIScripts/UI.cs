@@ -5,33 +5,26 @@ using UnityEngine.UI;
 
 public class UI : MonoBehaviour
 {
-    [SerializeField] public List<RawImage> m_Slots = new List<RawImage>();
-    public void AddMoney(Color color)
+    [SerializeField] private List<RawImage> m_InventorySlots = new List<RawImage>();
+
+    private void Start()
     {
-        for (int i = 0; i < m_Slots.Count; i++)
-        {
-            if (m_Slots[i].color == Color.white)
-            {
-                m_Slots[i].color = color;
-                break;
-            }
-        }
+        EventSystem.GetInstance().SubscribeTo(EEvents.ON_ITEM_ADDED_TO_INVENTORY, AddItem);
     }
 
-    private void Update()
+    private void AddItem(Dictionary<string, object> parameters)
     {
-        if (Input.GetKeyDown(KeyCode.S))
+        Debug.Log("aa");
+        for(int i = 0;i < m_InventorySlots.Count;i++)
         {
-            SaveSystem.SaveGame(this);
-        }
-        if(Input.GetKeyDown(KeyCode.L))
-        {
-            SaveData data = SaveSystem.LoadGame();
-            m_Slots[0].color = data.color1;
-            m_Slots[1].color = data.color2;
-            m_Slots[2].color = data.color3;
-            m_Slots[3].color = data.color4;
-            m_Slots[4].color = data.color5;
+            Debug.Log("bb");
+            if (m_InventorySlots[i].CompareTag("Untagged"))
+            {
+                Debug.Log("cc");
+                m_InventorySlots[i].color = Color.black;
+                m_InventorySlots[i].tag = "Tagged";
+                break;
+            }
         }
     }
 }

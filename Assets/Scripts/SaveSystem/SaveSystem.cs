@@ -5,9 +5,9 @@ using UnityEngine;
 
 public class SaveSystem
 {   
-    public static void SaveGame(UI ui)
+    public static void SaveGame(Inventory inventory)
     {
-        SaveData data = new SaveData(ui);
+        SaveData data = new SaveData(inventory);
         string jsonContent = JsonUtility.ToJson(data);
 
         File.WriteAllText(Application.persistentDataPath + "/SaveGame.json", jsonContent);

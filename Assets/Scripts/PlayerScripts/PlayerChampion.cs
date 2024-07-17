@@ -9,7 +9,7 @@ public class PlayerChampion : PlayerState
 
     }
 
-    public override void execute(UI m_UI)
+    public override void execute()
     {
         
     }

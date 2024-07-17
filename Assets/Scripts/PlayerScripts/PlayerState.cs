@@ -11,5 +11,5 @@ public abstract class PlayerState
         m_AttachedBehaviour = behaviour;
     }
 
-    public abstract void execute(UI m_UI);
+    public abstract void execute();
 }

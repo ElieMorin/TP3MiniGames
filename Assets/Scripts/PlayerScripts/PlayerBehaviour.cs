@@ -4,19 +4,19 @@ using UnityEngine;
 
 public class PlayerBehaviour : MonoBehaviour
 {
-    [SerializeField]
-    private UI m_UI;
+    public Inventory inventory;
 
     private PlayerState m_CurrentState;
     
     void Start()
     {
+        inventory = new Inventory();
         m_CurrentState = new PlayerRoaming(this);
     }
 
     void Update()
     {
-        m_CurrentState.execute(m_UI);   
+        m_CurrentState.execute();   
     }
 
     public void ChangeState(PlayerState state)
