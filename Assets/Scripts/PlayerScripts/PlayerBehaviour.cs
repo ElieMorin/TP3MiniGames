@@ -1,16 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerBehaviour : MonoBehaviour
 {
-    public Inventory inventory;
+    public Inventory inventory = new Inventory();
 
     private PlayerState m_CurrentState;
     
-    void Start()
+    void Awake()
     {
-        inventory = new Inventory();
         m_CurrentState = new PlayerRoaming(this);
     }
 

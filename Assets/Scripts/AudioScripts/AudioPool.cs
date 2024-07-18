@@ -13,6 +13,7 @@ public class AudioPool
             if (!source.isPlaying)
             {
                 return source;
+                Debug.LogError("null referrence exeption");
             }
         }
         AudioSource newSource = new AudioSource();

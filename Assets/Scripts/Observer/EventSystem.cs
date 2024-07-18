@@ -8,7 +8,7 @@ public enum EEvents
     ON_ITEM_ADDED_TO_INVENTORY,
     ON_MINIGAME_ENDED,
     ON_GAME_WON,
-    ON_LOAD_GAME
+    ON_LOAD_GAME,
 }
 
 public class EventSystem

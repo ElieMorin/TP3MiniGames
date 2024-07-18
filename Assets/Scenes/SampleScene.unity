@@ -2288,12 +2288,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e06fed6a15be45478ce6a16a1325ef1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemsStruct:
+  - Game: 0
+    Icon: {fileID: 0}
+  - Game: 1
+    Icon: {fileID: 21300000, guid: e7c1af4941b05c845b8e96cb7ed3248a, type: 3}
+  - Game: 2
+    Icon: {fileID: 21300000, guid: 331bb1f867da4094d89edffd01b962bf, type: 3}
+  - Game: 3
+    Icon: {fileID: 21300000, guid: de83c56902bc63c4da13ad96685fd5b1, type: 3}
   m_InventorySlots:
-  - {fileID: 1608451244}
-  - {fileID: 1451638650}
-  - {fileID: 1846006265}
-  - {fileID: 999547502}
-  - {fileID: 1385920868}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!4 &153885642 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 31bbda51eeab02f44a8e92a7da2f5ff8, type: 3}
