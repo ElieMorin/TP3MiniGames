@@ -33,6 +33,7 @@ public class Inventory
 
     public void AddToInventory(EMiniGamesRewards prizeWon)
     {
+
         for(int i = 0;i < m_Inventory.Count;i++)
         {
             if (m_Inventory[i] == EMiniGamesRewards.EMPTY)

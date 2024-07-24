@@ -7,22 +7,22 @@ public class PlayerRoaming : PlayerState
 {
     public PlayerRoaming(PlayerBehaviour behaviour) : base(behaviour)
     {
-        
+
     }
 
     public override void execute()
     {
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            m_AttachedBehaviour.inventory.AddToInventory(EMiniGamesRewards.COFFEE, );
+            m_AttachedBehaviour.inventory.AddToInventory(EMiniGamesRewards.COFFEE);
         }
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
-            m_AttachedBehaviour.inventory.AddToInventory(EMiniGamesRewards.DONUT, );
+            m_AttachedBehaviour.inventory.AddToInventory(EMiniGamesRewards.DONUT);
         }
         if (Input.GetKeyDown(KeyCode.Alpha3))
         {
-            m_AttachedBehaviour.inventory.AddToInventory(EMiniGamesRewards.TROPHIE, );
+            m_AttachedBehaviour.inventory.AddToInventory(EMiniGamesRewards.TROPHIE);
         }
         if (Input.GetKeyDown(KeyCode.L))
         {

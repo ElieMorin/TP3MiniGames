@@ -14,7 +14,7 @@ public class UI : MonoBehaviour
 {
     [SerializeField] private List<InventoryItems> itemsStruct = new List<InventoryItems>();   
 
-    [SerializeField] private List<Sprite> m_InventorySlots = new List<Sprite>();
+    [SerializeField] private List<Image> m_InventorySlots = new List<Image>();
 
     private void Start()
     {
@@ -24,17 +24,26 @@ public class UI : MonoBehaviour
 
     private void AddItem(Dictionary<string, object> parameters)
     {
-        var o = parameters.Values;
-        foreach (var item in o)
+        Debug.Log("second checkpoint");
+        Sprite imageToAdd = null;
+        EMiniGamesRewards items = (EMiniGamesRewards)parameters["ItemsList"];
+
+        for (int i = 0; i < itemsStruct.Count; i++)
         {
-            Debug.Log(item);
-        }
-        
-        for (int i = 0;i < m_InventorySlots.Count;i++)
-        {
-            if (m_InventorySlots[i] == null)
+            if (itemsStruct[i].Game == items)
             {
-                m_InventorySlots[i] = itemsStruct;
+                Debug.Log("third checkpoint");
+                imageToAdd = itemsStruct[i].Icon;
+            }
+        }
+
+        for (int i = 0; i < m_InventorySlots.Count; i++)
+        {
+            if (m_InventorySlots[i].sprite == null)
+            {
+                Debug.Log("last checkpoint");
+                m_InventorySlots[i].sprite = imageToAdd;
+                Debug.Log(m_InventorySlots[i]);
                 break;
             }
         }
@@ -42,6 +51,17 @@ public class UI : MonoBehaviour
 
     private void LoadInventory(Dictionary<string, object> parameters)
     {
+        List<EMiniGamesRewards> inventoryToLoad = (List<EMiniGamesRewards>)parameters["ItemsList"];
 
+        for(int i = 0; i < m_InventorySlots.Count; i++)
+        {
+            for(int j = 0;j < itemsStruct.Count; j++)
+            {
+                if (itemsStruct[j].Game == inventoryToLoad[i])
+                {
+                    m_InventorySlots[i].sprite = itemsStruct[j].Icon;
+                }
+            }    
+        }
     }
 }
