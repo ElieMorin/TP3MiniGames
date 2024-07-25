@@ -2,31 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting.FullSerializer;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class PlayerRoaming : PlayerState
 {
+    private NavMeshAgent m_Agent;
+
     public PlayerRoaming(PlayerBehaviour behaviour) : base(behaviour)
     {
-
+        m_Agent = m_AttachedBehaviour.GetComponent<NavMeshAgent>();
     }
 
     public override void execute()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1))
+        if (Input.GetMouseButtonDown(0))
         {
-            m_AttachedBehaviour.inventory.AddToInventory(EMiniGamesRewards.COFFEE);
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha2))
-        {
-            m_AttachedBehaviour.inventory.AddToInventory(EMiniGamesRewards.DONUT);
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha3))
-        {
-            m_AttachedBehaviour.inventory.AddToInventory(EMiniGamesRewards.TROPHIE);
-        }
-        if (Input.GetKeyDown(KeyCode.L))
-        {
-            m_AttachedBehaviour.inventory.LoadInventory();
+            Ray rayFromCamera = Camera.main.ScreenPointToRay(Input.mousePosition);
+            if (Physics.Raycast(rayFromCamera, out RaycastHit info))
+            {
+                m_Agent.SetDestination(info.point);
+            }
         }
     }
 }

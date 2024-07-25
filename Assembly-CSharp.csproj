@@ -70,6 +70,7 @@
     <Compile Include="Assets\Scripts\SaveSystem\SaveData.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\PlayerState.cs" />
     <Compile Include="Assets\Scripts\AudioScripts\AudioManager.cs" />
+    <Compile Include="Assets\Scripts\MiniGamesStarters\MiniGameDetectionBox.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\PlayerDonut.cs" />
   </ItemGroup>
   <ItemGroup>
